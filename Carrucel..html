@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><button type="button" onclick="mover(-1)">Atras</button></td>
+            <td><img id="img1" src="1.png"></td>
+            <td><button type="button" onclick="mover(1)">Adelante</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+var fotos=['1.png','2.png','3.png','4.png','5.png','6.png'];
+var img1=0;
+var img2=1;
+var img3=2;
+var a=0;
+function mover(val){
+    console.log("img1",img1)
+    if(img1==0){
+        if(val==1){
+            img1+=val;
+            document.getElementById("img1").src = fotos[img1];
+        }else{
+            img1=5;
+            document.getElementById("img1").src = fotos[img1];
+        }
+    }else if(img1==5){
+        if(val==1){
+            img1=0;
+            document.getElementById("img1").src = fotos[img1];
+        }else{
+            img1+=val;
+            document.getElementById("img1").src = fotos[img1];
+        }
+    }else{
+        if(val==1){
+            img1+=val;
+            document.getElementById("img1").src = fotos[img1];
+        }else{
+            img1+=val;
+            document.getElementById("img1").src = fotos[img1];
+        }
+    }
+}
+</script>
+</html>
+<!-- animacion para la version 2
+    <!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:yellow; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:yellow; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div></div>
+
+</body>
+</html>
+
+-->
