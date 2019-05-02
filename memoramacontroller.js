@@ -51,12 +51,17 @@ function Voltear(id){
             carta2=mazo[indice];
             document.getElementById(id).src = "img/"+mazo[indice]+"";
             if(carta1==carta2){
-                setTimeout(function() {alert("par "+pares+" encontrado");}, 300);
+                setTimeout(function() {
+                    alert("par "+pares+" encontrado");
+                    document.getElementById(pos2).hidden=true;
+                    document.getElementById(id).hidden=true;
+                }, 300);
                 pares++;
+                
             }else{
                 setTimeout(function() {
                     document.getElementById(id).src="img/logo.png";
-                document.getElementById(pos2).src="img/logo.png";
+                    document.getElementById(pos2).src="img/logo.png";
                 }, 300);
                 
             }
